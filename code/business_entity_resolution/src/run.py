@@ -1,5 +1,7 @@
 """End-to-end Business Entity Resolution pipeline (Kaggle-ready).
 
+See README.md for full options, hardware requirements, and reproduction steps.
+
     python src/run.py                       # auto-detects the dataset under /kaggle/input
     python src/run.py --data_dir .../dataset --out_dir output --work_dir /tmp/ber
     python src/run.py --smoke               # fast train-only sanity run on a 10% slice

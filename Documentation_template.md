@@ -123,7 +123,7 @@ Apart from Source 1's role as the reference, everything is learned from the data
 
 Later runs evaluate under S1 dropout, which adds harder, sibling-like decoys. Their scores are therefore, if anything, conservative relative to the first row.
 
-**Detail from run 97** (complete train log in `code/business_entity_resolution/logs/`):
+**Detail from run 97** (complete train log in `code/business_entity_resolution/logs/`; note: run 98's training log was missing, so its overall OOF scores come from the saved state file, while per-country and precision/recall details below are quoted from run 97):
 - **Per country:** India 0.9775 (709,768 S1), US 0.9876 (1,075,161 S1). India lags because its address and name vocabulary is richer.
 - **Pair precision 0.9970, recall 0.9598.** The model is precision-heavy, as F0.5 rewards. Recall is bounded mainly by blocking: the ceiling is 0.9919.
 - **Top stage-2 features by gain:** `p1`, then `p1_margin` (the competition margin between rival S1 candidates), `b_margin`, `p1_qmax`, `p1_srank`. The collective layer adds about +0.002 to +0.008 F0.5 on top of pairwise matching in every run.
