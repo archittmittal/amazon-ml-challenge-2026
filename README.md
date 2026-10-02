@@ -39,3 +39,10 @@ The challenge dataset is not included in this repository. Download it from the c
 ```bash
 bash make_submission.sh <team_name>    # -> dist/<team_name>_submission.zip
 ```
+
+### Submission Verification Checklist
+- [x] **`output/matching_results.tsv`**: Final matched entity predictions.
+- [x] **`output/candidate_pairs.tsv`**: Candidate pair blocking set (~661 MB, attached to GitHub Release `v1.0-submission`).
+- [x] **`code/business_entity_resolution/`**: Self-contained pipeline code with `src/`, `README.md`, and `requirements.txt`.
+- [x] **`Documentation_template.md`**: Completed methodology write-up.
+
