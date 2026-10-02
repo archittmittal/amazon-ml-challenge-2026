@@ -1,6 +1,6 @@
 # ML Challenge 2026: Business Entity Resolution Solution
 
-**Team Name:** [Your Team Name]
+**Team Name:** Archit Mittal
 **Team Members:** Archit Mittal, Purvansh Joshi, Aviral Mittal
 **Submission Date:** 2 October 2026
 
