@@ -39,7 +39,7 @@ python <student_resource>/utils/validate_submission.py \
    !python /kaggle/input/ber-code/src/postprocess.py --test_dir <...>/dataset/test \
            --in_dir /kaggle/working/output --out_dir /kaggle/working/final
    ```
-   Trained models and state are saved to `/kaggle/working/artifacts`. If the test stage dies, you can resume it with `--test_only`.
+   Trained models and state are saved to `/kaggle/working/artifacts`. If the test stage dies, you can resume it with `--test_only`. (Note: Run 98's model_2.txt was not downloaded, so running the pipeline from scratch is required for a fresh run.)
    With a GPU attached, `--gbm auto` switches to XGBoost/CUDA and trains on 100% of pairs.
 
 ## What the log prints (train stage)
