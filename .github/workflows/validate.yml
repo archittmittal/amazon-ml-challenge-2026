@@ -1,0 +1,30 @@
+name: Submission Structure Validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Check required documentation and code structure
+        run: |
+          test -f Documentation_template.md || { echo "Missing Documentation_template.md"; exit 1; }
+          test -f code/business_entity_resolution/README.md || { echo "Missing README.md"; exit 1; }
+          test -f code/business_entity_resolution/requirements.txt || { echo "Missing requirements.txt"; exit 1; }
+          test -f make_submission.sh || { echo "Missing make_submission.sh"; exit 1; }
+
+      - name: Verify Python code syntax
+        run: |
+          python -m py_compile code/business_entity_resolution/src/*.py
