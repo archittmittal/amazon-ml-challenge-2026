@@ -19,10 +19,12 @@ import polars as pl
 
 
 def read(path):
+    """Read TSV input using Polars without string quotes or schema inference overhead."""
     return pl.read_csv(path, separator='\t', quote_char=None, infer_schema=False)
 
 
 def explode(df, col):
+    """Explode comma-separated entity IDs column into individual rows."""
     return (df.with_columns(pl.col(col).fill_null('').str.split(','))
               .explode(col).filter(pl.col(col) != '').rename({col: 'entity_id'}))
 
