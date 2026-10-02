@@ -1,0 +1,40 @@
+name: Package Integrity & Build CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-submission-build:
+    name: Submission Packaging Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Create Mock Candidate Pairs for CI Test
+        run: |
+          mkdir -p output
+          if [ ! -f output/candidate_pairs.tsv ]; then
+            echo -e "source1_entity_id\tcandidate_entity_ids" > output/candidate_pairs.tsv
+            echo -e "E1\tE1_cand1,E1_cand2" >> output/candidate_pairs.tsv
+          fi
+          if [ ! -f output/matching_results.tsv ]; then
+            echo -e "source1_entity_id\tmatched_entity_ids" > output/matching_results.tsv
+            echo -e "E1\tE1_cand1" >> output/matching_results.tsv
+          fi
+
+      - name: Test Build Script Execution
+        run: |
+          bash make_submission.sh ci_test
+
+      - name: Verify Generated Package Layout
+        run: |
+          test -f dist/ci_test_submission.zip || { echo "Submission zip not created"; exit 1; }
+          unzip -l dist/ci_test_submission.zip | grep -q "output/matching_results.tsv"
+          unzip -l dist/ci_test_submission.zip | grep -q "output/candidate_pairs.tsv"
+          unzip -l dist/ci_test_submission.zip | grep -q "Documentation_template.md"
+          unzip -l dist/ci_test_submission.zip | grep -q "code/business_entity_resolution/README.md"
+          echo "Package structure verification passed!"
