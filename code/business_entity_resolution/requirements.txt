@@ -1,0 +1,8 @@
+# Python 3.10+ (developed on the Kaggle Python image, 2026)
+polars>=1.10,<2
+rapidfuzz>=3.6,<4
+lightgbm>=4.0,<5
+numpy>=1.24,<3
+psutil>=5.9
+# optional: GPU backend (--gbm xgb, or auto on a GPU runtime)
+xgboost>=2.0,<4

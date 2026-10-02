@@ -1,0 +1,237 @@
+installing ['rapidfuzz>=3.6']
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 40.1 MB/s eta 0:00:00
+[   0.0m   0.3GB free 32.1GB] start: cpu_count=4, cwd=/kaggle/working
+[   0.0m   0.3GB free 32.1GB] config: {'data_dir': '/kaggle/input/datasets/archittmittal/ml-challenge-2026-dataset/student_resource/dataset', 'out_dir': '/kaggle/working/output', 'work_dir': '/tmp/ber_work', 'workers': 4, 'cap': 400, 'no_rerank': False, 'no_sibling_dropout': False, 'topk': 10, 'min_ratio': 0.3, 'block_chunk': 100000, 'feat_chunk': 2000000, 'train_frac': 0.35, 'gbm': 'lgbm', 'rounds': 1500, 'smoke': False, 'artifacts_dir': '/kaggle/working/artifacts', 'match_test_prior': True, 'test_only': True}
+[   0.0m   0.4GB free 32.0GB] loaded artifacts from /kaggle/working/artifacts: decoder=expected_f, train OOF=0.98528
+  [test] source1: 1,732,544 records normalised
+  [test] source2: 4,887,273 records normalised
+  [test] source3: 5,082,316 records normalised
+[  12.1m   4.1GB free 27.9GB] blocking index: 1,732,544 S1 records, 61,848,692 postings (cap=400, rerank=False)
+[  13.5m   4.5GB free 26.8GB]   queried 100,000/1,494,740
+[  19.8m   4.7GB free 26.8GB]   queried 600,000/1,494,740
+[  25.8m   4.7GB free 26.8GB]   queried 1,100,000/1,494,740
+[  30.4m   3.8GB free 28.5GB]   rejected 88 implausible a_words merges, e.g. [('atlantique', 'pays'), ('connecticut', 'court'), ('od', 'orissa'), ('odisha', 'orissa'), ('york', 'ny'), ('wb', 'bengal')]
+[  30.4m   3.8GB free 28.5GB]   mined 316 equivalences for a_words; e.g. [('mh', 'maharashtra'), ('texas', 'tx'), ('maharashtr', 'maharashtra'), ('ohio', 'oh'), ('illinois', 'il'), ('tennessee', 'tn'), ('massachusetts', 'ma'), ('ka', 'karnataka'), ('arizona', 'az'), ('indiana', 'in'), ('gj', 'gujarat'), ('karnatak', 'karnataka')]
+[  30.5m   3.7GB free 28.6GB]   rejected 40 implausible n_core merges, e.g. [('aiti', 'it'), ('teknolojij', 'technologies'), ('injiniyaring', 'engineering'), ('egro', 'agro'), ('lt', 'it'), ('lst', 'first')]
+[  30.5m   3.7GB free 28.6GB]   mined 349 equivalences for n_core; e.g. [('estet', 'estate'), ('tek', 'tech'), ('inphra', 'infra'), ('prodakts', 'products'), ('kanstrakshan', 'construction'), ('pavar', 'power'), ('venchars', 'ventures'), ('devalapars', 'developers'), ('phud', 'food'), ('phuds', 'foods'), ('inphotek', 'infotech'), ('sistams', 'systems')]
+[  30.5m   3.7GB free 28.6GB]   rejected 76 implausible n_skel merges, e.g. [('fnns', 'fnnk'), ('at', 'it'), ('injnrng', 'engnrng'), ('egr', 'agr'), ('arbn', 'urbn'), ('es', 'ak')]
+[  30.5m   3.7GB free 28.6GB]   mined 240 equivalences for n_skel; e.g. [('intrnsnl', 'intrntnl'), ('mnjmnt', 'mngmnt'), ('knstrksn', 'knstrktn'), ('ljstks', 'lgstks'), ('vnkrs', 'vntrs'), ('prdsr', 'prdkr'), ('fndsn', 'fndtn'), ('infrstrkr', 'infrstrktr'), ('slsns', 'sltns'), ('knstrksns', 'knstrktns'), ('tknlj', 'tknlg'), ('knsltns', 'knsltnk')]
+[  32.1m   5.3GB free 26.2GB] blocking index: 1,732,544 S1 records, 61,641,293 postings (cap=400, rerank=True)
+[  33.6m   6.4GB free 25.7GB]   queried 100,000/9,969,589
+[  42.3m   6.4GB free 25.0GB]   queried 600,000/9,969,589
+[  49.9m   6.5GB free 25.9GB]   queried 1,100,000/9,969,589
+[  57.3m   6.6GB free 25.5GB]   queried 1,600,000/9,969,589
+[  64.7m   6.7GB free 25.6GB]   queried 2,100,000/9,969,589
+[  72.1m   6.7GB free 25.2GB]   queried 2,600,000/9,969,589
+[  79.6m   6.8GB free 25.2GB]   queried 3,100,000/9,969,589
+[  87.2m   6.9GB free 24.7GB]   queried 3,600,000/9,969,589
+[  94.9m   7.0GB free 24.9GB]   queried 4,100,000/9,969,589
+[ 102.4m   7.1GB free 24.6GB]   queried 4,600,000/9,969,589
+[ 111.5m   7.2GB free 24.8GB]   queried 5,100,000/9,969,589
+[ 117.8m   7.3GB free 24.7GB]   queried 5,600,000/9,969,589
+[ 124.2m   7.3GB free 24.9GB]   queried 6,100,000/9,969,589
+[ 130.6m   7.4GB free 24.6GB]   queried 6,600,000/9,969,589
+[ 137.0m   7.5GB free 24.5GB]   queried 7,100,000/9,969,589
+[ 143.4m   7.6GB free 24.4GB]   queried 7,600,000/9,969,589
+[ 149.8m   7.7GB free 24.1GB]   queried 8,100,000/9,969,589
+[ 156.3m   7.8GB free 24.4GB]   queried 8,600,000/9,969,589
+[ 162.7m   7.8GB free 24.4GB]   queried 9,100,000/9,969,589
+[ 169.1m   7.9GB free 24.0GB]   queried 9,600,000/9,969,589
+[ 173.8m   6.1GB free 25.9GB]   two-stage blocking: 9,971,596 pairs rescued by string re-ranking (0.201 of candidates)
+[ 174.2m   8.3GB free 23.4GB] [test] candidates: 49,604,823 pairs for 9,961,923 S2/S3 records
+[ 174.4m   8.2GB free 23.4GB]   rejected 102 implausible a_words merges, e.g. [('atlantique', 'pays'), ('connecticut', 'court'), ('od', 'orissa'), ('odisha', 'orissa'), ('nebraska', 'new'), ('york', 'ny')]
+[ 174.4m   8.2GB free 23.4GB]   mined 49 equivalences for a_words; e.g. [('virginia', 'wv'), ('oklahoma', 'oak'), ('naga', 'nagar'), ('baltimoer', 'baltimore'), ('gurgoan', 'gurgaon'), ('pul', 'paul'), ('raleih', 'raleigh'), ('rver', 'river'), ('rbad', 'road'), ('siant', 'st'), ('wahington', 'wa'), ('hiill', 'hill')]
+[ 174.5m   7.9GB free 24.1GB]   rejected 49 implausible n_core merges, e.g. [('aiti', 'it'), ('injiniyaring', 'engineering'), ('teknolojij', 'technologies'), ('egro', 'agro'), ('istarn', 'eastern'), ('phyuchar', 'future')]
+[ 174.5m   7.9GB free 24.1GB]   mined 29 equivalences for n_core; e.g. [('je', 'jai'), ('kanasalatensi', 'consultancy'), ('debhelaparas', 'developers'), ('pharachun', 'fortune'), ('shibam', 'shivam'), ('narth', 'north'), ('oyan', 'one'), ('ayapeks', 'apex'), ('niu', 'new'), ('iunaited', 'united'), ('kriyetibh', 'creative'), ('phaundesan', 'foundation')]
+[ 174.6m   7.9GB free 24.3GB]   rejected 71 implausible n_skel merges, e.g. [('at', 'it'), ('fnns', 'fnnk'), ('injnrng', 'engnrng'), ('egr', 'agr'), ('fkr', 'ftr'), ('intd', 'untd')]
+[ 174.6m   7.9GB free 24.3GB]   mined 4 equivalences for n_skel; e.g. [('sn', 's'), ('fdntn', 'fndtn'), ('kvrr', 'kvr'), ('aml', 'amkl')]
+[ 177.2m  10.1GB free 20.5GB] [test] number-agreement features: 0.468 of pairs look like a sibling cluster (records agreeing on a number that differs from S1's)
+[ 178.9m  10.8GB free 21.5GB]   features 2,000,000/49,604,823
+[ 180.6m  11.3GB free 21.5GB]   features 4,000,000/49,604,823
+[ 182.3m  11.9GB free 21.5GB]   features 6,000,000/49,604,823
+[ 184.1m  12.5GB free 21.5GB]   features 8,000,000/49,604,823
+[ 185.9m  13.0GB free 21.5GB]   features 10,000,000/49,604,823
+[ 187.6m  13.6GB free 21.5GB]   features 12,000,000/49,604,823
+[ 189.3m  14.2GB free 21.4GB]   features 14,000,000/49,604,823
+[ 191.0m  14.8GB free 21.4GB]   features 16,000,000/49,604,823
+[ 193.0m  15.3GB free 21.6GB]   features 18,000,000/49,604,823
+[ 194.7m  15.9GB free 21.4GB]   features 20,000,000/49,604,823
+[ 196.4m  16.5GB free 21.5GB]   features 22,000,000/49,604,823
+[ 198.1m  17.0GB free 21.3GB]   features 24,000,000/49,604,823
+[ 199.9m  17.6GB free 21.4GB]   features 26,000,000/49,604,823
+[ 201.6m  18.2GB free 21.3GB]   features 28,000,000/49,604,823
+[ 203.5m  16.1GB free 21.5GB]   features 30,000,000/49,604,823
+[ 205.2m  16.7GB free 21.4GB]   features 32,000,000/49,604,823
+[ 206.9m  17.3GB free 21.4GB]   features 34,000,000/49,604,823
+[ 208.7m  17.8GB free 21.4GB]   features 36,000,000/49,604,823
+[ 210.4m  18.4GB free 21.9GB]   features 38,000,000/49,604,823
+[ 212.1m  19.0GB free 22.0GB]   features 40,000,000/49,604,823
+[ 214.0m  18.6GB free 21.9GB]   features 42,000,000/49,604,823
+[ 215.7m  19.2GB free 21.4GB]   features 44,000,000/49,604,823
+[ 217.5m  19.8GB free 21.9GB]   features 46,000,000/49,604,823
+[ 219.2m  20.3GB free 21.9GB]   features 48,000,000/49,604,823
+[ 220.6m  20.8GB free 21.9GB]   features 49,604,823/49,604,823
+[ 224.1m  19.2GB free 21.8GB] [test] stage-1 predict
+[ 225.5m  20.2GB free 21.6GB]   model0 predict 2,000,000/49,604,823
+[ 226.8m  20.8GB free 21.6GB]   model0 predict 4,000,000/49,604,823
+[ 228.1m  21.4GB free 21.6GB]   model0 predict 6,000,000/49,604,823
+[ 229.6m  21.9GB free 21.6GB]   model0 predict 8,000,000/49,604,823
+[ 230.9m  22.5GB free 21.6GB]   model0 predict 10,000,000/49,604,823
+[ 232.2m  22.7GB free 21.6GB]   model0 predict 12,000,000/49,604,823
+[ 233.6m  22.1GB free 21.6GB]   model0 predict 14,000,000/49,604,823
+[ 235.3m  18.9GB free 21.6GB]   model0 predict 16,000,000/49,604,823
+[ 236.6m  19.5GB free 21.6GB]   model0 predict 18,000,000/49,604,823
+[ 238.0m  20.0GB free 21.6GB]   model0 predict 20,000,000/49,604,823
+[ 239.4m  20.6GB free 21.5GB]   model0 predict 22,000,000/49,604,823
+[ 240.7m  21.1GB free 21.5GB]   model0 predict 24,000,000/49,604,823
+[ 242.1m  21.5GB free 21.5GB]   model0 predict 26,000,000/49,604,823
+[ 243.4m  21.9GB free 21.5GB]   model0 predict 28,000,000/49,604,823
+[ 245.1m  19.8GB free 21.5GB]   model0 predict 30,000,000/49,604,823
+[ 246.5m  20.4GB free 21.5GB]   model0 predict 32,000,000/49,604,823
+[ 247.8m  21.0GB free 21.5GB]   model0 predict 34,000,000/49,604,823
+[ 249.2m  21.6GB free 21.5GB]   model0 predict 36,000,000/49,604,823
+[ 250.5m  22.1GB free 21.5GB]   model0 predict 38,000,000/49,604,823
+[ 251.9m  22.7GB free 21.5GB]   model0 predict 40,000,000/49,604,823
+[ 253.3m  23.2GB free 21.5GB]   model0 predict 42,000,000/49,604,823
+[ 254.7m  22.3GB free 18.5GB]   model0 predict 44,000,000/49,604,823
+[ 256.2m  19.9GB free 21.5GB]   model0 predict 46,000,000/49,604,823
+[ 257.6m  20.5GB free 21.5GB]   model0 predict 48,000,000/49,604,823
+[ 258.7m  20.9GB free 21.5GB]   model0 predict 49,604,823/49,604,823
+[ 259.5m  21.5GB free 21.5GB]   model1 predict 2,000,000/49,604,823
+[ 260.3m  22.1GB free 21.5GB]   model1 predict 4,000,000/49,604,823
+[ 261.2m  22.6GB free 21.4GB]   model1 predict 6,000,000/49,604,823
+[ 262.0m  23.0GB free 21.4GB]   model1 predict 8,000,000/49,604,823
+[ 262.8m  23.4GB free 21.4GB]   model1 predict 10,000,000/49,604,823
+[ 263.7m  23.5GB free 21.4GB]   model1 predict 12,000,000/49,604,823
+[ 264.5m  23.3GB free 21.4GB]   model1 predict 14,000,000/49,604,823
+[ 265.6m  21.7GB free 21.4GB]   model1 predict 16,000,000/49,604,823
+[ 266.4m  22.3GB free 21.4GB]   model1 predict 18,000,000/49,604,823
+[ 267.3m  22.9GB free 21.4GB]   model1 predict 20,000,000/49,604,823
+[ 268.1m  23.4GB free 21.4GB]   model1 predict 22,000,000/49,604,823
+[ 268.9m  23.9GB free 21.4GB]   model1 predict 24,000,000/49,604,823
+[ 269.8m  24.2GB free 21.4GB]   model1 predict 26,000,000/49,604,823
+[ 270.6m  24.0GB free 21.3GB]   model1 predict 28,000,000/49,604,823
+[ 271.4m  23.9GB free 21.4GB]   model1 predict 30,000,000/49,604,823
+[ 272.3m  23.8GB free 21.3GB]   model1 predict 32,000,000/49,604,823
+[ 273.1m  23.8GB free 21.3GB]   model1 predict 34,000,000/49,604,823
+[ 273.9m  23.9GB free 21.3GB]   model1 predict 36,000,000/49,604,823
+[ 274.7m  23.8GB free 21.3GB]   model1 predict 38,000,000/49,604,823
+[ 275.8m  21.2GB free 21.3GB]   model1 predict 40,000,000/49,604,823
+[ 276.7m  21.7GB free 21.3GB]   model1 predict 42,000,000/49,604,823
+[ 277.6m  22.2GB free 21.3GB]   model1 predict 44,000,000/49,604,823
+[ 278.5m  22.7GB free 21.3GB]   model1 predict 46,000,000/49,604,823
+[ 279.3m  23.2GB free 21.3GB]   model1 predict 48,000,000/49,604,823
+[ 280.0m  23.7GB free 21.3GB]   model1 predict 49,604,823/49,604,823
+[ 281.9m  25.7GB free 13.9GB]   context anchor-sim 2,000,000/49,549,046
+[ 282.1m  25.7GB free 14.4GB]   context anchor-sim 4,000,000/49,549,046
+[ 282.3m  25.7GB free 14.6GB]   context anchor-sim 6,000,000/49,549,046
+[ 282.4m  25.7GB free 14.5GB]   context anchor-sim 8,000,000/49,549,046
+[ 282.6m  25.7GB free 14.4GB]   context anchor-sim 10,000,000/49,549,046
+[ 282.8m  25.7GB free 14.7GB]   context anchor-sim 12,000,000/49,549,046
+[ 283.0m  25.7GB free 14.7GB]   context anchor-sim 14,000,000/49,549,046
+[ 283.2m  25.7GB free 15.0GB]   context anchor-sim 16,000,000/49,549,046
+[ 283.3m  25.7GB free 14.5GB]   context anchor-sim 18,000,000/49,549,046
+[ 283.5m  25.7GB free 14.6GB]   context anchor-sim 20,000,000/49,549,046
+[ 283.7m  25.7GB free 14.6GB]   context anchor-sim 22,000,000/49,549,046
+[ 283.9m  25.7GB free 14.8GB]   context anchor-sim 24,000,000/49,549,046
+[ 284.1m  25.7GB free 15.0GB]   context anchor-sim 26,000,000/49,549,046
+[ 284.3m  25.7GB free 14.7GB]   context anchor-sim 28,000,000/49,549,046
+[ 284.5m  25.7GB free 14.5GB]   context anchor-sim 30,000,000/49,549,046
+[ 284.6m  25.7GB free 14.8GB]   context anchor-sim 32,000,000/49,549,046
+[ 284.8m  25.7GB free 14.4GB]   context anchor-sim 34,000,000/49,549,046
+[ 285.0m  25.7GB free 14.9GB]   context anchor-sim 36,000,000/49,549,046
+[ 285.2m  25.7GB free 14.7GB]   context anchor-sim 38,000,000/49,549,046
+[ 285.4m  25.7GB free 14.5GB]   context anchor-sim 40,000,000/49,549,046
+[ 285.6m  25.7GB free 14.7GB]   context anchor-sim 42,000,000/49,549,046
+[ 285.9m  24.8GB free 14.7GB]   context anchor-sim 44,000,000/49,549,046
+[ 286.1m  24.8GB free 15.0GB]   context anchor-sim 46,000,000/49,549,046
+[ 286.3m  24.8GB free 14.6GB]   context anchor-sim 48,000,000/49,549,046
+[ 286.5m  24.7GB free 14.7GB]   context anchor-sim 49,549,046/49,549,046
+[ 286.6m  25.6GB free 13.9GB]   context anchor2-sim 2,000,000/49,053,376
+[ 286.6m  25.6GB free 14.2GB]   context anchor2-sim 4,000,000/49,053,376
+[ 286.7m  25.6GB free 14.1GB]   context anchor2-sim 6,000,000/49,053,376
+[ 286.7m  25.6GB free 13.9GB]   context anchor2-sim 8,000,000/49,053,376
+[ 286.8m  25.6GB free 14.1GB]   context anchor2-sim 10,000,000/49,053,376
+[ 286.8m  25.6GB free 14.1GB]   context anchor2-sim 12,000,000/49,053,376
+[ 286.9m  25.6GB free 14.0GB]   context anchor2-sim 14,000,000/49,053,376
+[ 286.9m  25.6GB free 14.2GB]   context anchor2-sim 16,000,000/49,053,376
+[ 287.0m  25.6GB free 14.0GB]   context anchor2-sim 18,000,000/49,053,376
+[ 287.1m  25.6GB free 14.1GB]   context anchor2-sim 20,000,000/49,053,376
+[ 287.1m  25.6GB free 14.1GB]   context anchor2-sim 22,000,000/49,053,376
+[ 287.2m  25.6GB free 14.1GB]   context anchor2-sim 24,000,000/49,053,376
+[ 287.2m  25.6GB free 13.9GB]   context anchor2-sim 26,000,000/49,053,376
+[ 287.3m  25.6GB free 13.6GB]   context anchor2-sim 28,000,000/49,053,376
+[ 287.3m  25.6GB free 13.9GB]   context anchor2-sim 30,000,000/49,053,376
+[ 287.4m  25.6GB free 13.8GB]   context anchor2-sim 32,000,000/49,053,376
+[ 287.4m  25.6GB free 13.8GB]   context anchor2-sim 34,000,000/49,053,376
+[ 287.5m  25.6GB free 13.9GB]   context anchor2-sim 36,000,000/49,053,376
+[ 287.6m  25.6GB free 13.8GB]   context anchor2-sim 38,000,000/49,053,376
+[ 287.6m  25.6GB free 13.8GB]   context anchor2-sim 40,000,000/49,053,376
+[ 287.7m  25.6GB free 13.9GB]   context anchor2-sim 42,000,000/49,053,376
+[ 287.7m  25.6GB free 13.9GB]   context anchor2-sim 44,000,000/49,053,376
+[ 287.8m  25.6GB free 14.0GB]   context anchor2-sim 46,000,000/49,053,376
+[ 287.8m  25.6GB free 14.1GB]   context anchor2-sim 48,000,000/49,053,376
+[ 287.9m  25.5GB free 14.2GB]   context anchor2-sim 49,053,376/49,053,376
+[ 287.9m  25.5GB free 14.2GB]   context features: 49,604,823 pairs, 0.999 with anchor
+[ 288.1m  22.1GB free 17.7GB] [test] stage-2 predict
+[ 288.4m  23.0GB free 17.3GB]   model0 predict 2,000,000/49,604,823
+[ 288.6m  23.6GB free 17.2GB]   model0 predict 4,000,000/49,604,823
+[ 288.8m  24.1GB free 17.2GB]   model0 predict 6,000,000/49,604,823
+[ 289.1m  24.3GB free 17.2GB]   model0 predict 8,000,000/49,604,823
+[ 289.3m  24.6GB free 17.2GB]   model0 predict 10,000,000/49,604,823
+[ 289.5m  25.1GB free 17.2GB]   model0 predict 12,000,000/49,604,823
+[ 289.8m  25.5GB free 17.2GB]   model0 predict 14,000,000/49,604,823
+[ 290.1m  25.5GB free 17.2GB]   model0 predict 16,000,000/49,604,823
+[ 290.3m  25.0GB free 17.2GB]   model0 predict 18,000,000/49,604,823
+[ 290.6m  25.2GB free 17.2GB]   model0 predict 20,000,000/49,604,823
+[ 290.9m  25.7GB free 17.2GB]   model0 predict 22,000,000/49,604,823
+[ 291.1m  26.3GB free 17.2GB]   model0 predict 24,000,000/49,604,823
+[ 291.4m  26.7GB free 17.2GB]   model0 predict 26,000,000/49,604,823
+[ 291.7m  27.1GB free 17.2GB]   model0 predict 28,000,000/49,604,823
+[ 291.9m  27.1GB free 17.2GB]   model0 predict 30,000,000/49,604,823
+[ 292.2m  27.2GB free 17.2GB]   model0 predict 32,000,000/49,604,823
+[ 292.4m  27.2GB free 17.1GB]   model0 predict 34,000,000/49,604,823
+[ 292.6m  27.1GB free 17.2GB]   model0 predict 36,000,000/49,604,823
+[ 292.8m  27.1GB free 17.1GB]   model0 predict 38,000,000/49,604,823
+[ 293.0m  27.0GB free 17.2GB]   model0 predict 40,000,000/49,604,823
+[ 293.2m  26.8GB free 17.1GB]   model0 predict 42,000,000/49,604,823
+[ 293.5m  26.8GB free 17.1GB]   model0 predict 44,000,000/49,604,823
+[ 293.8m  26.6GB free 17.1GB]   model0 predict 46,000,000/49,604,823
+[ 294.0m  26.5GB free 17.1GB]   model0 predict 48,000,000/49,604,823
+[ 294.1m  26.5GB free 17.1GB]   model0 predict 49,604,823/49,604,823
+[ 294.4m  26.5GB free 17.1GB]   model1 predict 2,000,000/49,604,823
+[ 294.6m  26.4GB free 17.1GB]   model1 predict 4,000,000/49,604,823
+[ 294.9m  26.2GB free 17.1GB]   model1 predict 6,000,000/49,604,823
+[ 295.1m  26.3GB free 17.1GB]   model1 predict 8,000,000/49,604,823
+[ 295.3m  26.5GB free 17.1GB]   model1 predict 10,000,000/49,604,823
+[ 295.6m  26.6GB free 17.1GB]   model1 predict 12,000,000/49,604,823
+[ 295.8m  26.8GB free 17.1GB]   model1 predict 14,000,000/49,604,823
+[ 296.4m  24.3GB free 17.1GB]   model1 predict 16,000,000/49,604,823
+[ 296.6m  24.8GB free 17.0GB]   model1 predict 18,000,000/49,604,823
+[ 296.9m  25.3GB free 17.0GB]   model1 predict 20,000,000/49,604,823
+[ 297.2m  25.8GB free 16.9GB]   model1 predict 22,000,000/49,604,823
+[ 297.4m  26.2GB free 17.0GB]   model1 predict 24,000,000/49,604,823
+[ 297.7m  26.5GB free 17.0GB]   model1 predict 26,000,000/49,604,823
+[ 297.9m  26.8GB free 17.0GB]   model1 predict 28,000,000/49,604,823
+[ 298.2m  26.5GB free 17.0GB]   model1 predict 30,000,000/49,604,823
+[ 298.5m  26.1GB free 17.0GB]   model1 predict 32,000,000/49,604,823
+[ 298.8m  25.7GB free 17.0GB]   model1 predict 34,000,000/49,604,823
+[ 299.0m  26.1GB free 17.0GB]   model1 predict 36,000,000/49,604,823
+[ 299.3m  26.7GB free 17.0GB]   model1 predict 38,000,000/49,604,823
+[ 299.6m  27.1GB free 16.9GB]   model1 predict 40,000,000/49,604,823
+[ 299.8m  27.6GB free 16.9GB]   model1 predict 42,000,000/49,604,823
+[ 300.1m  27.6GB free 16.9GB]   model1 predict 44,000,000/49,604,823
+[ 300.4m  27.5GB free 16.9GB]   model1 predict 46,000,000/49,604,823
+[ 300.7m  27.4GB free 16.9GB]   model1 predict 48,000,000/49,604,823
+[ 300.9m  27.4GB free 16.9GB]   model1 predict 49,604,823/49,604,823
+[ 301.8m  26.2GB free 17.1GB] [test] predicted 5,829,563 matches for 1,632,979 S1 entities
+[ 302.3m  26.1GB free 16.3GB] wrote /kaggle/working/output/matching_results.tsv (1,732,544 rows, 1,632,979 with matches) and /kaggle/working/output/candidate_pairs.tsv
+[ 303.5m  22.4GB free 17.4GB] validator: ML Challenge 2026 — submission validator
+  test dir: /kaggle/input/datasets/archittmittal/ml-challenge-2026-dataset/student_resource/dataset/test
+  required S1 entities: 1732544
+  matching_results.tsv: 1732544 rows (99565 empty, 1632979 non-empty).
+  candidate_pairs.tsv: 1732544 rows (9 empty, 1732535 non-empty).
+
+WARNING: ID-existence check is OFF (the default) — not checking that matched/candidate IDs exist in the test set. Every other rule is still checked. Re-run with --check-ids to enable it (needs test_source2/3.tsv; uses more memory). A nonexistent ID only lowers your score, never rejects your submission.
+PASS — no blocking issues found. Safe to submit.
+[ 303.5m  22.4GB free 17.4GB] done

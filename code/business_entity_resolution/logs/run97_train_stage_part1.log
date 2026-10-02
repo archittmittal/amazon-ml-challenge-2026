@@ -1,0 +1,62 @@
+installing ['rapidfuzz>=3.6']
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 32.2 MB/s eta 0:00:00
+[   0.0m   0.5GB free 31.9GB] start: cpu_count=4, cwd=/kaggle/working
+[   0.0m   0.5GB free 31.9GB] config: {'data_dir': '/kaggle/input/datasets/archittmittal/ml-challenge-2026-dataset/student_resource/dataset', 'out_dir': '/kaggle/working/output', 'work_dir': '/tmp/ber_work', 'workers': 4, 'cap': 200, 'topk': 10, 'min_ratio': 0.3, 'block_chunk': 100000, 'feat_chunk': 2000000, 'train_frac': 1.0, 'gbm': 'xgb', 'rounds': 1500, 'smoke': False, 'artifacts_dir': '/kaggle/working/artifacts', 'match_test_prior': True, 'test_only': False}
+  [train] source1: 2,206,821 records normalised
+  [train] source2: 5,034,616 records normalised
+  [train] source3: 5,285,603 records normalised
+[  11.7m   4.7GB free 25.9GB] S1 dropout to match test decoy density {country: (train decoys/S1, test decoys/S1, drop rate)}: {'US': (1.215, 2.297, 0.188), 'India': (1.215, 2.36, 0.196)}; true pairs 7,638,365 -> 6,178,903
+[  12.5m   4.3GB free 27.9GB] blocking index: 1,784,929 S1 records, 58,160,537 postings (cap=200)
+[  12.9m   4.6GB free 26.5GB]   queried 100,000/10,320,219
+[  15.0m   4.7GB free 26.4GB]   queried 600,000/10,320,219
+[  17.1m   4.7GB free 26.5GB]   queried 1,100,000/10,320,219
+[  19.2m   4.8GB free 26.4GB]   queried 1,600,000/10,320,219
+[  21.3m   4.8GB free 26.5GB]   queried 2,100,000/10,320,219
+[  23.4m   4.9GB free 26.4GB]   queried 2,600,000/10,320,219
+[  25.5m   4.9GB free 26.4GB]   queried 3,100,000/10,320,219
+[  27.7m   5.0GB free 26.3GB]   queried 3,600,000/10,320,219
+[  29.8m   5.0GB free 26.1GB]   queried 4,100,000/10,320,219
+[  31.9m   5.1GB free 26.2GB]   queried 4,600,000/10,320,219
+[  34.0m   5.1GB free 26.0GB]   queried 5,100,000/10,320,219
+[  35.9m   5.2GB free 26.1GB]   queried 5,600,000/10,320,219
+[  37.7m   5.2GB free 25.8GB]   queried 6,100,000/10,320,219
+[  39.6m   5.3GB free 25.7GB]   queried 6,600,000/10,320,219
+[  41.5m   5.4GB free 25.8GB]   queried 7,100,000/10,320,219
+[  43.4m   5.4GB free 25.6GB]   queried 7,600,000/10,320,219
+[  45.3m   5.5GB free 25.5GB]   queried 8,100,000/10,320,219
+[  47.2m   5.5GB free 25.8GB]   queried 8,600,000/10,320,219
+[  49.0m   5.6GB free 25.5GB]   queried 9,100,000/10,320,219
+[  50.9m   5.6GB free 25.5GB]   queried 9,600,000/10,320,219
+[  52.8m   5.7GB free 25.6GB]   queried 10,100,000/10,320,219
+[  53.9m   6.5GB free 25.3GB] [train] candidates: 44,561,087 pairs for 10,300,689 S2/S3 records
+[  54.0m   6.6GB free 24.9GB]   rejected 90 implausible a_words merges, e.g. [('connecticut', 'court'), ('od', 'orissa'), ('odisha', 'orissa'), ('york', 'ny'), ('carolina', 'nc'), ('maryvale', 'phoenix')]
+[  54.0m   6.6GB free 24.9GB]   mined 321 equivalences for a_words; e.g. [('texas', 'tx'), ('mh', 'maharashtra'), ('ohio', 'oh'), ('illinois', 'il'), ('maharashtr', 'maharashtra'), ('tennessee', 'tn'), ('massachusetts', 'ma'), ('arizona', 'az'), ('indiana', 'in'), ('maryland', 'md'), ('virginia', 'va'), ('washington', 'wa')]
+[  54.1m   6.2GB free 25.5GB]   rejected 43 implausible n_core merges, e.g. [('aiti', 'it'), ('injiniyaring', 'engineering'), ('egro', 'agro'), ('teknolojij', 'technologies'), ('lst', 'first'), ('lt', 'it')]
+[  54.1m   6.2GB free 25.5GB]   mined 296 equivalences for n_core; e.g. [('tek', 'tech'), ('bildars', 'builders'), ('treding', 'trading'), ('prodakts', 'products'), ('estet', 'estate'), ('devalapars', 'developers'), ('kansalting', 'consulting'), ('phuds', 'foods'), ('phud', 'food'), ('prodyusar', 'producer'), ('inphra', 'infra'), ('pavar', 'power')]
+[  54.1m   6.2GB free 25.8GB]   rejected 70 implausible n_skel merges, e.g. [('at', 'it'), ('fnns', 'fnnk'), ('injnrng', 'engnrng'), ('egr', 'agr'), ('fkr', 'ftr'), ('ist', 'est')]
+[  54.1m   6.2GB free 25.8GB]   mined 215 equivalences for n_skel; e.g. [('intrnsnl', 'intrntnl'), ('mnjmnt', 'mngmnt'), ('knstrksns', 'knstrktns'), ('prdsr', 'prdkr'), ('knsltns', 'knsltnk'), ('ljstks', 'lgstks'), ('enrj', 'enrg'), ('infrstrkr', 'infrstrktr'), ('knstrksn', 'knstrktn'), ('fndsn', 'fndtn'), ('slsns', 'sltns'), ('tknlj', 'tknlg')]
+[  56.0m   9.1GB free 20.7GB] [train] number-agreement features: 0.334 of pairs look like a sibling cluster (records agreeing on a number that differs from S1's)
+[  57.5m   9.6GB free 22.4GB]   features 2,000,000/44,561,087
+[  59.0m  10.2GB free 22.5GB]   features 4,000,000/44,561,087
+[  60.4m  10.7GB free 22.4GB]   features 6,000,000/44,561,087
+[  61.9m  11.2GB free 22.5GB]   features 8,000,000/44,561,087
+[  63.4m  11.8GB free 22.6GB]   features 10,000,000/44,561,087
+[  64.9m  12.3GB free 23.0GB]   features 12,000,000/44,561,087
+[  66.3m  12.9GB free 23.0GB]   features 14,000,000/44,561,087
+[  67.8m  13.4GB free 23.1GB]   features 16,000,000/44,561,087
+[  69.3m  13.9GB free 22.8GB]   features 18,000,000/44,561,087
+[  70.8m  14.5GB free 22.7GB]   features 20,000,000/44,561,087
+[  72.3m  15.0GB free 22.7GB]   features 22,000,000/44,561,087
+[  73.8m  15.5GB free 22.8GB]   features 24,000,000/44,561,087
+[  75.3m  16.1GB free 22.7GB]   features 26,000,000/44,561,087
+[  76.8m  16.6GB free 22.8GB]   features 28,000,000/44,561,087
+[  78.2m  17.2GB free 22.7GB]   features 30,000,000/44,561,087
+[  79.7m  17.7GB free 22.7GB]   features 32,000,000/44,561,087
+[  81.2m  18.2GB free 22.7GB]   features 34,000,000/44,561,087
+[  82.7m  18.8GB free 22.5GB]   features 36,000,000/44,561,087
+[  84.2m  19.3GB free 22.9GB]   features 38,000,000/44,561,087
+[  85.7m  19.8GB free 23.0GB]   features 40,000,000/44,561,087
+[  87.2m  20.4GB free 22.9GB]   features 42,000,000/44,561,087
+[  88.6m  20.9GB free 22.9GB]   features 44,000,000/44,561,087
+[  89.1m  21.1GB free 22.8GB]   features 44,561,087/44,561,087
+[  89.2m  20.1GB free 23.7GB] [train] blocking pair recall = 0.97723; F0.5 ceiling with a perfect matcher = 0.99192; pairs/query = 4.33

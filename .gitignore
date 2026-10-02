@@ -1,0 +1,15 @@
+# challenge data and organiser material (not redistributed)
+student_resource/
+*.pdf
+
+# past Kaggle runs, models and alternative submissions (kept locally)
+experiments/
+
+# >100 MB: shipped in the submission zip / GitHub Release instead
+output/candidate_pairs.tsv
+dist/
+*.zip
+
+__pycache__/
+*.pyc
+.DS_Store
